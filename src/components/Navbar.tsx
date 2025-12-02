@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { LOGO_BASE64, NAV_ITEMS } from '../constants';
+import { NAV_ITEMS } from '../constants';
+import logo from '../assets/logo-ingenio.PNG';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [imgError, setImgError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,25 +24,19 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo Section */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="relative h-10 w-auto overflow-hidden">
-             {!imgError ? (
-                <img 
-                  src={LOGO_BASE64} 
-                  alt="INGENIO Logo" 
-                  className="h-10 w-auto object-contain"
-                  onError={() => setImgError(true)}
-                />
-             ) : (
-               <div className="flex items-center gap-2">
-                 <div className="h-10 w-10 bg-brand-blue rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                   I
-                 </div>
-                 <span className="text-xl font-bold text-brand-dark tracking-tight">
-                    INGENIO <span className="text-brand-blue">B.I.</span>
-                 </span>
-               </div>
-             )}
-          </div>
+          <img
+            src={logo}
+            alt="INGENIO Logo"
+            style={{
+              width: '42px',
+              height: '42px',
+              objectFit: 'contain',
+              borderRadius: '6px',
+            }}
+          />
+          <span className="text-xl font-bold text-brand-dark tracking-tight">
+            INGENIO <span className="text-brand-blue">B.I.</span>
+          </span>
         </a>
 
         {/* Desktop Nav */}
