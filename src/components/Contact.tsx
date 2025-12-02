@@ -16,90 +16,32 @@ const Contact: React.FC = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Hablemos de su próximo proyecto</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Contacto</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                ¿Listo para transformar sus datos en valor? Nuestro equipo de expertos está preparado para diseñar la solución que su empresa necesita.
+                Ingenio-BI Solutions S.A.S.<br/>
+                Guayaquil, Ecuador<br/>
+                Calle 4 de Noviembre, 3509<br/>
+                Teléfono / WhatsApp: +593 939 967 756<br/>
+                Correo: contacto@ingeniobisolutions.com
               </p>
-            </div>
-
-            <div className="space-y-6 pt-4">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-blue-50 rounded-lg text-brand-blue">
-                  <Mail size={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-brand-dark">Email</h4>
-                  <p className="text-gray-600">contacto@ingeniobi.com</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-blue-50 rounded-lg text-brand-blue">
-                  <Phone size={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-brand-dark">Teléfono</h4>
-                  <p className="text-gray-600">+34 900 000 000</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-blue-50 rounded-lg text-brand-blue">
-                  <MapPin size={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-brand-dark">Oficinas</h4>
-                  <p className="text-gray-600">Madrid, España</p>
-                </div>
-              </div>
             </div>
           </motion.div>
 
-          {/* Form Side */}
+          {/* Map Side */}
           <motion.div 
              initial={{ opacity: 0, x: 20 }}
              whileInView={{ opacity: 1, x: 0 }}
              viewport={{ once: true }}
-             className="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50"
+             className="bg-white rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50 overflow-hidden"
           >
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-brand-dark mb-2">Nombre completo</label>
-                <input 
-                  type="text" 
-                  id="name"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
-                  placeholder="Juan Pérez"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-brand-dark mb-2">Correo electrónico</label>
-                <input 
-                  type="email" 
-                  id="email"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
-                  placeholder="juan@empresa.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-brand-dark mb-2">Mensaje</label>
-                <textarea 
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all resize-none"
-                  placeholder="Cuéntanos sobre tu proyecto..."
-                />
-              </div>
-
-              <button 
-                type="submit"
-                className="w-full py-4 bg-brand-blue text-white font-bold rounded-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/20"
-              >
-                Enviar Mensaje
-              </button>
-            </form>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.3899925557463!2d-79.8995663!3d-2.1828024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d434707b7ed%3A0x91a54c2ec1a5f5a1!2sCalle%204%20de%20Noviembre%203509%2C%20Guayaquil%20090105%2C%20Ecuador!5e0!3m2!1ses!2sec!4v1733093512345"
+              width="100%"
+              height="300"
+              style={{ border: 0, borderRadius: '12px' }}
+              allowFullScreen={true}
+              loading="lazy"
+            ></iframe>
           </motion.div>
 
         </div>
