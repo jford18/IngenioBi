@@ -6,6 +6,7 @@ import Solutions from './components/Solutions';
 import Clients from './components/Clients';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppFloat from './components/WhatsAppFloat';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };

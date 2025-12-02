@@ -20,12 +20,10 @@ const Hero: React.FC = () => {
               Transformación Digital e Inteligencia de Negocios
             </span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-brand-dark leading-tight mb-8">
-              Datos que impulsan <br />
-              <span className="text-brand-blue">Decisiones Inteligentes</span>
+              Inteligencia de Negocios, Integraciones y Soluciones Tecnológicas
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Especialistas en Business Intelligence, Integración de Sistemas y Analítica Avanzada. 
-              Convertimos la complejidad de sus datos en ventajas competitivas claras.
+              Somos Ingenio-BI Solutions S.A.S., una empresa ecuatoriana especializada en Business Intelligence, integración de sistemas, automatización, desarrollo web y analítica corporativa. Ayudamos a empresas a transformar sus datos en decisiones inteligentes.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
