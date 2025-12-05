@@ -1,12 +1,10 @@
 import React from 'react';
 
-import farmcorpLogo from '@/assets/farmcorp-logo.png';
-
 const CLIENTS = [
   {
     name: 'FarmCorp',
     description: '(proyectos de automatización y analítica)',
-    logo: farmcorpLogo,
+    logo: 'https://farmcorp.com.ec/wp-content/uploads/2024/09/Grupo-4-1.svg',
     alt: 'Corporación Farmacéutica Farmcorp S.A.',
   },
   { name: 'Teledata', description: '(automatización de reportes)' },
