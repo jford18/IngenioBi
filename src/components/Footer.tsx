@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center gap-2 mb-6">
               {/* Using a simpler text representation for footer contrast or filtering the logo if possible, but text is cleaner on dark bg */}
               <div className="h-8 w-8 bg-brand-blue rounded flex items-center justify-center font-bold text-white">I</div>
-              <span className="text-xl font-bold tracking-tight text-white">INGENIO B.I.</span>
+              <span className="text-xl font-bold tracking-tight text-white">INGENIO BI</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Empoderando empresas a través de la inteligencia de datos y la innovación tecnológica.
