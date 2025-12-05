@@ -1,9 +1,21 @@
 import React from 'react';
 
+import farmcorpLogo from '@/assets/farmcorp-logo.png';
+
 const CLIENTS = [
-  { name: 'FarmCorp', description: '(proyectos de automatización y analítica)' },
+  {
+    name: 'FarmCorp',
+    description: '(proyectos de automatización y analítica)',
+    logo: farmcorpLogo,
+    alt: 'Corporación Farmacéutica Farmcorp S.A.',
+  },
   { name: 'Teledata', description: '(automatización de reportes)' },
-  { name: 'SW SecurityWorld', description: '(portal web + panel administrativo)' },
+  {
+    name: 'SW SecurityWorld',
+    description: '(portal web + panel administrativo)',
+    logo: 'http://www.swsecurityworld.com/wp-content/uploads/2018/08/Security-World-logo-1.png',
+    alt: 'SW Security World Logo',
+  },
   { name: 'Empresas privadas en Ecuador', description: '(2023-2025)' },
 ];
 
@@ -14,13 +26,24 @@ const Clients: React.FC = () => {
         <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-10">
           Empresas que confían en nosotros
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60">
+        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 opacity-60">
           {CLIENTS.map((client, index) => (
-            <div key={index} className="flex items-center gap-2 group cursor-default">
-              <div className="w-8 h-8 rounded-full bg-gray-200 group-hover:bg-brand-blue/20 transition-colors" />
+            <div
+              key={index}
+              className="w-full max-w-xs sm:w-60 md:w-64 bg-white border border-gray-100 rounded-xl p-5 shadow-sm flex flex-col items-center gap-3 text-center"
+            >
+              {client.logo ? (
+                <img
+                  src={client.logo}
+                  alt={client.alt ?? client.name}
+                  className="h-12 md:h-14 object-contain mx-auto"
+                />
+              ) : (
+                <div className="w-12 h-12 rounded-full bg-gray-200" />
+              )}
               <div>
-                <span className="text-xl font-bold text-gray-400 group-hover:text-brand-dark transition-colors">{client.name}</span>
-                <span className="text-sm text-gray-400 ml-2">{client.description}</span>
+                <p className="text-lg font-bold text-gray-500">{client.name}</p>
+                <p className="text-sm text-gray-400">{client.description}</p>
               </div>
             </div>
           ))}
