@@ -7,14 +7,12 @@ const CLIENTS = [
     logo: 'https://farmcorp.com.ec/wp-content/uploads/2024/09/Grupo-4-1.svg',
     alt: 'Corporación Farmacéutica Farmcorp S.A.',
   },
-  { name: 'Teledata', description: '(automatización de reportes)' },
   {
     name: 'SW SecurityWorld',
     description: '(portal web + panel administrativo)',
     logo: 'http://www.swsecurityworld.com/wp-content/uploads/2018/08/Security-World-logo-1.png',
     alt: 'SW Security World Logo',
   },
-  { name: 'Empresas privadas en Ecuador', description: '(2023-2025)' },
 ];
 
 const Clients: React.FC = () => {
